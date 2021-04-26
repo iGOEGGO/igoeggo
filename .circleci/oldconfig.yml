@@ -1,0 +1,53 @@
+version: 2.1
+jobs:
+  build:
+    machine:
+      image: 'ubuntu-2004:202010-01'
+    steps:
+      - checkout
+      - run: echo "Hello world!"
+  
+  testLocalDeploy:
+    machine:
+      image: 'ubuntu-2004:202010-01'
+    steps:
+      - checkout
+      - run: echo "Hello world!"
+      - run: | 
+          echo test
+          docker --version
+          cd deployment
+          # docker build . -t testneu
+          # docker-compose up -d
+          # curl -G "localhost:3838"
+          ./deploylocal.sh
+          docker ps
+
+  testBackend:
+    docker:
+        - image: rocker/shiny:latest
+    steps:
+      - checkout
+      - run: echo "Hello world!"
+      - run: cp deployment/requirements.R iGOEGGO_r_shiny/
+      - run: |
+          # library("remotes")
+          # R -e "remotes::install_github(\"r-lib/vdiffr\")"
+          # R -e "install.packages(\"vdiffr\")"
+          # R -e "install.packages(\"dplyr\")"
+          cd iGOEGGO_r_shiny
+          R -f requirements.R
+      - run: | 
+          cd iGOEGGO_r_shiny
+          # R -e "testthat::test_dir('tests')"
+          R -e "testthat::test_dir('tests')" >> test.txt
+          cat test.txt
+          grep -Fxq "Failed:   0" test.txt
+
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      # - testLocalDeploy
+      # - testBackend

@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 10.8
+cache:
+  directories:
+    - node_modules
+script:
+- npm install cypress --save-dev
+- ./node_modules/.bin/cypress install 
+- ./node_modules/.bin/cypress run --config baseUrl="http://igoeggo.herokuapp.com" video=false

@@ -1,0 +1,9 @@
+old;new
+PassengerId;Test1
+Pclass;Test2
+Sex;Test3
+Age;Test4
+SibSp;Test5
+Parch;Test6
+Fare;Test7
+Embarked;Test8

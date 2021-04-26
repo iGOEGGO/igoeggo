@@ -1,0 +1,7 @@
+{
+  "projectId": "7iu2x2",
+  "baseUrl": "http://127.0.0.1:3838",
+  "defaultCommandTimeout":10000,
+  "chromeWebSecurity":false,
+  "ignoreTestFiles": "*shinyproxy*"
+}

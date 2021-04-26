@@ -1,0 +1,37 @@
+proxy:
+  title: ""
+  logo-url: https://goeg.at/sites/goeg.at/files/goeg_logo_305x58_0.png
+  landing-page: /
+  heartbeat-rate: 10000
+  heartbeat-timeout: 60000
+  port: 8080
+  authentication: simple
+  admin-groups: scientists
+  container-backend: docker
+  users:
+  - name: tim
+    password: passtim
+    groups: goeg_employee
+  - name: jan
+    password: passjan
+    groups: goeg_employee
+  - name: daniel
+    password: passdaniel
+    groups: goeg_employee
+  - name: chris
+    password: passchris
+    groups: goeg_employee
+  docker:
+    url: http://localhost:2375
+    port-range-start: 20000
+  specs:
+  - id: iGOEGGO
+    description: Der iGÖGGO ist eine interaktive grafische Oberfläche zum Analysieren von Daten.
+    container-image: testshiny
+    container-cmd: ["./docker-entrypoint.sh"]
+    access-groups: goeg_employee
+    container-volumes: ["/var/lib/igoeggo/shiny_bookmarks/:/srv/shiny-server/shiny_bookmarks", "/var/lib/igoeggo/database/:/srv/shiny-server/database"]
+
+logging:
+  file:
+    shinyproxy.log

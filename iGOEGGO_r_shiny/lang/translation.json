@@ -1,0 +1,102 @@
+
+{
+  "languages": ["de", "en"],
+  "translation": [
+    {
+      "de": "Ein kleiner Test",
+      "en": "A small test"
+    },
+    {
+      "de": "Datensatz herunterladen",
+      "en": "Download dataset"
+    },
+
+    {
+      "de": "Beim verarbeiten deiner Eingabe ist ein Fehler aufgetreten",
+      "en": "Something went terribly wrong"
+  },
+
+  {
+      "de":"Geben Sie Ihr Kommando ein",
+      "en":"Please insert your command"
+  },
+
+  {
+      "de":"Wählen Sie eine Operation",
+      "en":"Choose your operation"
+  },
+
+  {
+      "de":"Anwenden",
+      "en":"Apply"
+  },
+
+  {
+      "de":"Spaltennamen ändern",
+      "en":"Change column name"
+  },
+
+  {
+      "de":"Wählen Sie eine CSV Datei",
+      "en":"Choose a CSV file"
+  },
+
+  {
+      "de":"Neuer Name",
+      "en":"New name"
+  },
+
+  {
+      "de":"Spalte",
+      "en":"Column"
+  },
+
+  {
+      "de":"Datentyp ändern",
+      "en":"Change datatype"
+  },
+
+  {
+      "de":"Datensatz",
+      "en":"Dataset"
+  },
+
+  {
+      "de":"Datentyp",
+      "en":"Datatype"
+  },
+
+  {
+      "de":"Datensatz auswählen",
+      "en":"Select dataset"
+  },
+
+  {
+      "de":"Durchsuchen",
+      "en":"Browse"
+  },
+
+  {
+      "de":"Keine Datei ausgewählt",
+      "en":"No file selected"
+  },
+  
+  {
+    "de":"Alte Kommandos entfernen",
+    "en":"Remove old commands"
+  },
+  {
+    "de":"Transformieren",
+    "en":"Transform"
+  },
+  {
+    "de":"Datensatz zurücksetzen",
+    "en":"reset dataset"
+  },
+  
+  {
+    "de":"Als Kreisdiagramm darstellen",
+    "en":"Display as Piechart"
+  }
+    ]
+}
